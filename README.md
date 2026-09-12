@@ -2,17 +2,24 @@
 
 A mobile-first, static NYC trip web app for **September 12–15, 2026**, with the return arriving in Toronto around **2:00 AM on September 16**.
 
-## Current V1 features
+## Current V2 features
 
 - 5 itinerary date tabs: Sat 12 → Wed 16
 - Timeline cards for driving stops, activities and meals
 - Pending / Done status stored in `localStorage`
+- **Done time automatically recorded in NYC/Toronto time and editable manually**
 - Expandable details, notes and Google Maps shortcuts
-- Meal-by-meal restaurant selection framework
+- Rich place details: history, must-see items, facts, visit tips and selected Bollywood filming connections
+- Detailed Central Park route, AMNH 3-hour route and MoMA quick-tour guide
+- Meal-by-meal restaurant choices with **Website / Menu / Maps** links
 - Add local restaurants and assign them to meal slots
 - Add local itinerary stops
-- Toronto → NYC / Parking / Return drive sections
+- Detailed Toronto → NYC / Parking / Return drive sections
+- Full outbound and return Google Maps route shortcuts
+- SpotHero shortcut on the Parking tab
 - Open-Meteo live weather + local offline cache
+- NYC/Toronto + India clocks on the Home page
+- Sept 15 birthday treatment: **Baby’s Birthday in NYC**
 - Important links page
 - Offline trip checklist
 - Automatic light/dark theme
@@ -20,23 +27,22 @@ A mobile-first, static NYC trip web app for **September 12–15, 2026**, with th
 - Password gate remembered per device
 - Export/import of dynamic local data
 
-## Temporary V1 password
+## Temporary password
 
-The temporary password is:
+The password remains:
 
 `NYC2026`
 
-Before publishing, change it if you want. The code stores only a SHA-256 hash in `js/auth.js`, but because this is a static site, this is only a **privacy barrier**, not true server-side security.
+We intentionally did **not** change it in this update. Change it before the final publish if desired. The code stores only a SHA-256 hash in `js/auth.js`, but because this is a static site, it is a privacy barrier rather than true server-side security.
 
-### Change the password
+### Change the password later
 
-1. Choose a new password.
+1. Choose the final password.
 2. Generate its SHA-256 hash.
 3. Open `js/auth.js`.
 4. Replace the value of `PASSWORD_HASH`.
-5. Remove or update the comment that mentions the temporary password.
 
-You can generate a SHA-256 hash locally with:
+Example on macOS/Linux:
 
 ```bash
 printf 'YOUR_NEW_PASSWORD' | shasum -a 256
@@ -44,46 +50,30 @@ printf 'YOUR_NEW_PASSWORD' | shasum -a 256
 
 ## GitHub Pages deployment
 
-1. Create a new GitHub repository, for example `nyc-2026`.
-2. Upload **the contents of this folder** to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose the branch containing the files (usually `main`) and `/ (root)`.
-6. Save and wait for the GitHub Pages URL to appear.
+1. Upload **the contents of this folder** to the repository root.
+2. In GitHub, open **Settings → Pages**.
+3. Choose **Deploy from a branch**.
+4. Choose `main` and `/ (root)`.
+5. Save and wait for the GitHub Pages URL.
 
-The app uses only relative file paths, so it works from a project-style GitHub Pages URL such as `username.github.io/nyc-2026/`.
+If replacing an older deployed version, the service-worker cache version has been bumped to V2. Refresh the site after GitHub finishes deploying; the new service worker will replace the old cached shell.
 
-## Files to edit as we refine the trip
+## Main editable data files
 
-Static trip content is split into editable data files:
-
-- `js/data/trip.js` — trip identity and day tabs
-- `js/data/itinerary.js` — itinerary stops and attraction details
-- `js/data/restaurants.js` — meal slots and curated restaurant options
-- `js/data/drive.js` — drive and parking summary
+- `js/data/trip.js` — trip identity, day tabs and birthday label
+- `js/data/itinerary.js` — itinerary stops and detailed attraction content
+- `js/data/restaurants.js` — meal slots, menus and restaurant choices
+- `js/data/drive.js` — drive, parking and route links
 - `js/data/links.js` — reusable important links
 
-The UI code is mostly in `js/app.js`, and the design is in `css/style.css`.
-
-## What is intentionally unfinished
-
-This is the working app shell built around the current itinerary. We still plan to refine:
-
-- exact Sept 12 driving stops/times
-- exact Sept 15–16 return-drive stops
-- curated food choices for each meal
-- parking garage details
-- attraction history and fun facts
-- attraction-specific visit tips
-- additional official/history links
-- exact transfer modes and verified travel times
-- selected attraction photography
+The UI code is in `js/app.js`, dynamic-state helpers are in `js/storage.js`, and styling is in `css/style.css`.
 
 ## Local data behavior
 
-The following are stored separately on each device in `localStorage`:
+Stored separately on each device in `localStorage`:
 
 - Done / Pending itinerary status
+- Done time for completed itinerary items
 - Notes
 - Restaurant selections
 - Locally added restaurants
@@ -92,12 +82,8 @@ The following are stored separately on each device in `localStorage`:
 - Weather cache
 - Auth state
 
-Use **More → Settings → Export local changes** if you want to manually move this local state to another device.
-
-## Weather
-
-Weather comes from Open-Meteo. If live fetch fails, the app falls back to the last cached response on that device. Forecast cards only appear when the trip dates are included in the forecast data returned by the provider.
+Use **More → Settings → Export local changes** to move local state manually to another device.
 
 ## Privacy note
 
-Do not store tickets, passports, payment details, confirmation numbers or other sensitive data in this static app. The included password gate is client-side only.
+Do not store tickets, passports, payment details, confirmation numbers or other sensitive data in this static app. The home starting point is intentionally shown generically as **Port Union, Toronto** rather than a private street address.

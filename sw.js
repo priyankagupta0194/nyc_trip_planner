@@ -1,4 +1,4 @@
-const CACHE='nyc-2026-v1';
+const CACHE='nyc-2026-v2';
 const ASSETS=[
   './','./index.html','./itinerary.html','./food.html','./drive.html','./weather.html','./links.html','./lists.html','./more.html','./settings.html',
   './css/style.css','./js/data/trip.js','./js/data/itinerary.js','./js/data/restaurants.js','./js/data/drive.js','./js/data/links.js','./js/storage.js','./js/auth.js','./js/weather.js','./js/app.js','./assets/nyc-hero.svg','./manifest.webmanifest','./assets/icons/icon-192.png','./assets/icons/icon-512.png'

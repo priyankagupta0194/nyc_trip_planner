@@ -8,10 +8,43 @@
   const remove = key => localStorage.removeItem(P+key);
   const allKeys = () => Object.keys(localStorage).filter(k=>k.startsWith(P));
 
+  function statusRecord(id){
+    const raw = get('status_'+id, 'pending');
+    // Backward compatibility with V1, which stored only "pending" / "done".
+    if(typeof raw === 'string') return {status:raw, completedAt:null, completedTime:null};
+    if(raw && typeof raw === 'object') return {
+      status: raw.status === 'done' ? 'done' : 'pending',
+      completedAt: raw.completedAt || null,
+      completedTime: raw.completedTime || null
+    };
+    return {status:'pending', completedAt:null, completedTime:null};
+  }
+
   window.TripStore = {
     get, set, remove,
-    status(id){ return get('status_'+id, 'pending'); },
-    setStatus(id, status){ set('status_'+id, status); },
+    statusRecord,
+    status(id){ return statusRecord(id).status; },
+    completedTime(id){ return statusRecord(id).completedTime; },
+    setStatus(id, status, completedTime=null){
+      if(status === 'done'){
+        const current = statusRecord(id);
+        set('status_'+id, {
+          status:'done',
+          completedAt: current.completedAt || new Date().toISOString(),
+          completedTime: completedTime || current.completedTime || null
+        });
+      } else {
+        set('status_'+id, {status:'pending', completedAt:null, completedTime:null});
+      }
+    },
+    setCompletedTime(id, completedTime){
+      const current = statusRecord(id);
+      set('status_'+id, {
+        status:'done',
+        completedAt: current.completedAt || new Date().toISOString(),
+        completedTime: completedTime || null
+      });
+    },
     note(id){ return get('note_'+id, ''); },
     setNote(id, note){ set('note_'+id, note); },
     selectedRestaurant(mealId){ return get('meal_'+mealId, null); },
