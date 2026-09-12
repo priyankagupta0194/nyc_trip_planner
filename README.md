@@ -87,3 +87,8 @@ Use **More → Settings → Export local changes** to move local state manually 
 ## Privacy note
 
 Do not store tickets, passports, payment details, confirmation numbers or other sensitive data in this static app. The home starting point is intentionally shown generically as **Port Union, Toronto** rather than a private street address.
+
+
+## V3 — NYC subway / bus directions
+
+V3 adds expandable first-time-rider transit instructions between itinerary stops where public transit is recommended. Each transit connector includes the station, subway line or bus route, direction of travel, transfers, walk/exit guidance, a live Google Maps transit button, and an MTA service-change button. Because NYC weekend and construction service can change, the static route is the normal/preferred route and should be checked against live transit before boarding.

@@ -50,6 +50,16 @@ window.NYC_DATA.links = [
     "category": "Transport"
   },
   {
+    "title": "MTA Subway Map",
+    "url": "https://www.mta.info/map/5256",
+    "category": "Transport"
+  },
+  {
+    "title": "MTA Planned Service Changes",
+    "url": "https://www.mta.info/planned-service-changes",
+    "category": "Transport"
+  },
+  {
     "title": "SpotHero NYC Parking",
     "url": "https://spothero.com/city/nyc-parking",
     "category": "Driving"

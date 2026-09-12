@@ -279,6 +279,22 @@ window.NYC_DATA.itinerary = {
       "mealSlot": "sep13-breakfast",
       "details": {
         "about": "Breakfast before heading to Lower Manhattan."
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "1"
+        ],
+        "summary": "Times Sq–42 St → South Ferry",
+        "direction": "Downtown toward South Ferry",
+        "steps": [
+          "Assuming breakfast is near the hotel, walk about 8–10 min to Times Sq–42 St.",
+          "Inside the station, follow the red 1 signs for the Downtown platform.",
+          "Take the 1 train to South Ferry — stay on until the last stop.",
+          "Exit toward Whitehall St / The Battery and walk about 2–4 min into the park."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Hyatt+Place+New+York+City+Times+Square&destination=The+Battery+New+York+NY&travelmode=transit",
+        "note": "Sunday service can change for maintenance. Open Live Transit before leaving."
       }
     },
     {
@@ -534,6 +550,23 @@ window.NYC_DATA.itinerary = {
       "mealSlot": "sep13-dinner",
       "details": {
         "about": "Choose from the Brooklyn / DUMBO dinner options on the Food page."
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "A",
+          "C"
+        ],
+        "summary": "High St–Brooklyn Bridge → 42 St–Port Authority",
+        "direction": "Manhattan-bound / Uptown",
+        "steps": [
+          "From the DUMBO dinner area, walk to High St–Brooklyn Bridge station (usually about 10–15 min depending on the restaurant).",
+          "Follow signs for Manhattan-bound A/C trains.",
+          "Take the A or C to 42 St–Port Authority Bus Terminal.",
+          "Exit near 8th Ave / 40–42 St and walk about 5–8 min to the hotel."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=DUMBO+Brooklyn+NY&destination=Hyatt+Place+New+York+City+Times+Square&travelmode=transit",
+        "note": "If your selected dinner is much closer to York St, Google Maps may offer the F instead. Use Live Transit for the exact restaurant."
       }
     },
     {
@@ -592,6 +625,22 @@ window.NYC_DATA.itinerary = {
       "mealSlot": "sep14-breakfast",
       "details": {
         "about": "Breakfast before Central Park."
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "A",
+          "C"
+        ],
+        "summary": "42 St–Port Authority → 59 St–Columbus Circle",
+        "direction": "Uptown",
+        "steps": [
+          "Assuming breakfast is near the hotel, walk to 42 St–Port Authority Bus Terminal.",
+          "Follow signs for Uptown A/C trains.",
+          "Take the A (fastest if it arrives first) or C to 59 St–Columbus Circle.",
+          "Exit for Columbus Circle / Central Park South. Your Central Park route starts here."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Hyatt+Place+New+York+City+Times+Square&destination=Columbus+Circle+New+York+NY&travelmode=transit"
       }
     },
     {
@@ -779,6 +828,25 @@ window.NYC_DATA.itinerary = {
           "If 15 minutes ahead, add the Akeley Hall of African Mammals.",
           "Deliberately skip the many other halls — the goal is memorable highlights, not completion."
         ]
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "B",
+          "C",
+          "F"
+        ],
+        "summary": "81 St–Museum of Natural History → W 4 St → 2 Av",
+        "direction": "Downtown, then Downtown/Brooklyn-bound F",
+        "steps": [
+          "Enter 81 St–Museum of Natural History on Central Park West.",
+          "Take a Downtown B or C to W 4 St–Washington Sq.",
+          "At W 4 St, follow signs for the Downtown/Brooklyn-bound F train.",
+          "Take the F to 2 Av.",
+          "Exit around Houston St / 2nd Ave and walk about 5–8 min to Bungalow at 24 First Ave."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=American+Museum+of+Natural+History+New+York+NY&destination=Bungalow+24+First+Avenue+New+York+NY&travelmode=transit",
+        "note": "B service is weekday-only; the C is the dependable fallback for the first leg."
       }
     },
     {
@@ -811,6 +879,21 @@ window.NYC_DATA.itinerary = {
           "Menu changes are possible; use the live Menu link before ordering.",
           "Recommendations intentionally avoid seafood and steakhouse-style dishes."
         ]
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "F"
+        ],
+        "summary": "2 Av → 42 St–Bryant Park",
+        "direction": "Uptown / Queens-bound",
+        "steps": [
+          "Walk about 5–8 min to the 2 Av F station at Houston St.",
+          "Take an Uptown/Queens-bound F train to 42 St–Bryant Park.",
+          "Exit near 42nd St and walk east about 6–8 min toward Vanderbilt Ave / One Vanderbilt.",
+          "SUMMIT entrance is at One Vanderbilt beside Grand Central."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Bungalow+24+First+Avenue+New+York+NY&destination=SUMMIT+One+Vanderbilt+New+York+NY&travelmode=transit"
       }
     },
     {
@@ -874,6 +957,21 @@ window.NYC_DATA.itinerary = {
         "mustKnow": [
           "This is a working station; the Main Concourse is the priority if time is tight."
         ]
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "S"
+        ],
+        "summary": "Grand Central–42 St → Times Sq–42 St",
+        "direction": "Westbound shuttle",
+        "steps": [
+          "Inside Grand Central, follow signs for the gray S / 42 St Shuttle.",
+          "Take the S one stop to Times Sq–42 St.",
+          "From Times Square, walk about 8–10 min to the hotel in Midtown West."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Grand+Central+Terminal+New+York+NY&destination=Hyatt+Place+New+York+City+Times+Square&travelmode=transit",
+        "note": "The 42 St Shuttle normally runs until around midnight, so it fits your planned 8:30–9:00 PM trip. The 7 is an easy backup."
       }
     },
     {
@@ -943,6 +1041,22 @@ window.NYC_DATA.itinerary = {
       "mealSlot": "sep15-breakfast",
       "details": {
         "about": "Birthday breakfast before MoMA."
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "E"
+        ],
+        "summary": "42 St–Port Authority → 5 Av/53 St",
+        "direction": "Uptown / Queens-bound",
+        "steps": [
+          "Assuming breakfast is near the hotel, walk to 42 St–Port Authority Bus Terminal.",
+          "Follow signs for the Uptown/Queens-bound E train.",
+          "Take the E two stops to 5 Av/53 St.",
+          "Exit on the Fifth Avenue side and walk about 3–5 min to MoMA on W 53rd St."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Hyatt+Place+New+York+City+Times+Square&destination=Museum+of+Modern+Art+New+York+NY&travelmode=transit",
+        "note": "At 5 Av/53 St, MTA has a station-access notice in effect during 2026; follow posted entrance/exit signs."
       }
     },
     {
@@ -1074,6 +1188,23 @@ window.NYC_DATA.itinerary = {
         "mustKnow": [
           "Keep this as a focused stop so the 2:30 Empire State timing stays intact."
         ]
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "N",
+          "R",
+          "W"
+        ],
+        "summary": "5 Av/59 St → 34 St–Herald Sq",
+        "direction": "Downtown",
+        "steps": [
+          "From Apple Fifth Avenue, walk a few minutes to 5 Av/59 St.",
+          "Take a Downtown N, R or W train.",
+          "Get off at 34 St–Herald Sq.",
+          "Walk east about 5 min along 34th St to the Empire State Building at Fifth Avenue."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Apple+Fifth+Avenue+New+York+NY&destination=Empire+State+Building+New+York+NY&travelmode=transit"
       }
     },
     {
@@ -1100,6 +1231,22 @@ window.NYC_DATA.itinerary = {
         "mustKnow": [
           "The current plan is an exterior / landmark visit, not a booked observation deck."
         ]
+      },
+      "transitPlan": {
+        "mode": "bus",
+        "lines": [
+          "M34-SBS"
+        ],
+        "summary": "E 34 St/5 Av → Hudson Yards",
+        "direction": "Westbound toward Javits Center / 12 Av",
+        "steps": [
+          "Walk to the westbound M34-SBS stop on 34th St at Fifth Avenue.",
+          "Board the M34-SBS toward Javits Center / 12 Av and tap your contactless card/phone or OMNY when boarding.",
+          "Get off at W 34 St/Hudson Blvd E (or 11 Av/W 34 St if suggested live).",
+          "Walk about 2–5 min south toward the Vessel / Hudson Yards plaza."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Empire+State+Building+New+York+NY&destination=Vessel+Hudson+Yards+New+York+NY&travelmode=transit",
+        "note": "This direct crosstown bus avoids a subway transfer and is usually the simplest first-time route."
       }
     },
     {
@@ -1125,6 +1272,21 @@ window.NYC_DATA.itinerary = {
         "mustKnow": [
           "Check current access / ticket rules on the official link before you go; the visitor policy has changed over time."
         ]
+      },
+      "transitPlan": {
+        "mode": "subway",
+        "lines": [
+          "7"
+        ],
+        "summary": "34 St–Hudson Yards → Times Sq–42 St",
+        "direction": "Queens-bound / eastbound",
+        "steps": [
+          "If your final garage is near Times Square, enter 34 St–Hudson Yards.",
+          "Take the 7 one stop to Times Sq–42 St.",
+          "Walk from Times Square to your garage. If the final garage is elsewhere, use the Navigate button instead."
+        ],
+        "liveUrl": "https://www.google.com/maps/dir/?api=1&origin=Vessel+Hudson+Yards+New+York+NY&destination=Parking+near+Times+Square+New+York+NY&travelmode=transit",
+        "note": "This is an optional shortcut based on the current Times Square-area parking plan; exact instructions should follow your final garage."
       }
     },
     {
